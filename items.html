@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Items</title>
+<script>
+function bill()
+{
+var x=0;
+if(document.getElementById("laptop").checked)
+x=x+10000;
+if(document.getElementById("phone").checked)
+x=x+10000;
+if(document.getElementById("headphones").checked)//
+x=x+5000;
+if(document.getElementById("wifi").checked)
+x=x+2500;
+if(document.getElementById("Roti with paneer curry").checked)
+x=x+100;
+if(document.getElementById("Rice with fish curry").checked)
+x=x+150;
+if(document.getElementById("Chicken noodles").checked)
+x=x+200;
+if(document.getElementById("encyclopedia").checked)
+x=x+150;
+if(document.getElementById("comics").checked)
+x=x+300;
+if(document.getElementById("story").checked)
+x=x+200;
+if(x>0)
+alert("Your bill is INR "+x+" only");
+}
+</script>
+</head>
+<body bgcolor="aqua">
+<h1>Choose your desired item(s)</h1>
+<a href="#e">Buy electronic items</a><br>
+<a href="#f">Buy food items</a><br>
+<a href="#b">Buy books</a><br>
+<form onsubmit="bill()">
+<b id="e"><font size="20" color="red">Electronic items</font></b><br>
+<img src="laptop.jpg" height="200" width="200">
+Laptop(1 piece)---(INR 10000)<input type="checkbox" id="laptop"><br>
+<img src="phone.jpg" height="200" width="200">
+Android mobile phone(1 piece)---(INR 10000)<input type="checkbox" id="phone"><br>
+<img src="phone.webp" height="200" width="200">
+Headphones(1 pair)---(INR 5000)<input type="checkbox" id="headphones"><br>
+<img src="wifi.jpg" height="200" width="200">
+Wifi router(1 piece)---(INR 2500)<input type="checkbox" id="wifi"><br>
+<b id="f"><font size="20" color="red">Food items</font></b><br>
+<img src="roti.jpg" height="200" width="200">
+Roti with paneer curry(1 plate)---(INR 100)<input type="checkbox" id="Roti with paneer curry"><br>
+<img src="rice.jpg" height="200" width="200">
+Rice with fish curry(1 plate)---(INR 150)<input type="checkbox" id="Rice with fish curry"><br>
+<img src="noodles.jpg" height="200" width="200">
+Chicken noodles(1 plate)---(INR 200)<input type="checkbox" id="Chicken noodles"><br>
+<b id="b"><font size="20" color="red">Books</font></b><br>
+<img src="space.jpg" height="200" width="200">
+Space encyclopedia(1 copy)---(INR 150)<input type="checkbox" id="encyclopedia"><br>
+<img src="comics.jpg" height="200" width="200">
+Comics(2 copies)---(INR 300)<input type="checkbox" id="comics"><br>
+<img src="book.jpg" height="200" width="200">
+Story books(2 copies)---(INR 200)<input type="checkbox" id="story"><br>
+<input type="submit" value="Send">
+</form>
+<p id="securitylink">
+<a href="security.html">Proceed to security check</a>
+</p>
+</body>
+</html>

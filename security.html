@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Security Check</title>
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+</script> 
+<script> 
+$.getJSON("https://api.ipify.org?format=json",function(data){$("#ipa").html(data.ip);}) 
+</script> 
+</head>
+<body align="center" bgcolor="aqua">
+<h1>PLEASE ENTER YOUR DETAILS (ALL ARE MANDATORY)</h1>
+<form align="center">
+Name <input type="text" required><br><br>
+Phone number <input type="number" min=1000000000 max=9999999999 required><br><br>
+Location of the delivery <input type="text" required><br><br>
+<input type="submit" value="Submit">
+</form>
+<a href="payment.html"><font size="5">Proceed to payment</font></a><br>
+(Your IP Address is visible to us)<br>
+<p id="ipa">
+</p>
+</body>
+</html>
