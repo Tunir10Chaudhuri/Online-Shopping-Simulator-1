@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>19BIT0212_project_wishlist</title>
+<style>
+body {
+  background-color: orange;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body align="center">
+<h1>Enter your wishlist (anonymously)</h1>
+<script>
+var app = angular.module("List", []); 
+app.controller("control", function($scope) {
+    $scope.products = [];
+    $scope.addItem = function () {
+        $scope.products.push($scope.New);
+    }    
+    $scope.removeItem = function (x) {
+        $scope.products.splice(x, 1);
+    }
+});
+</script>
+<div ng-app="List" ng-controller="control">
+  <ul>
+    <li ng-repeat="x in products">{{x}}<span ng-click="removeItem($index)">×</span></li>
+  </ul>
+  <input ng-model="New">
+  <button ng-click="addItem()">Add</button>
+</div>
+<p>Click x to remove an item from your wishlist.</p>
+<div id="here">
+<button type="button" onclick="thanks()">Click here to submit your wishlist</button>
+</div>
+<script>
+function thanks() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      alert("Thank you very much");
+    }
+  };
+  xhttp.open("GET", "", true);
+  xhttp.send();
+}
+</script>
+</body>
+</html>
